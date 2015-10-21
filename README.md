@@ -1,4 +1,4 @@
-# Jekyll::Imgix
+# jekyll-imgix ![Travis Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/imgix`. To experiment with that code, run `bin/console` for an interactive prompt.
 
