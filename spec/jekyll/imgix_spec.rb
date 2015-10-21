@@ -15,6 +15,10 @@ describe Jekyll::Imgix do
   context 'development mode' do
     let(:url) { "https://google.com/cats.gif" }
 
+    before do
+      expect(Jekyll).to receive(:env).and_return("development")
+    end
+
     it 'passes values through' do
       expect(template.imgix_url(url)).to eq url
     end
@@ -37,7 +41,7 @@ describe Jekyll::Imgix do
     let(:context) {double("Object", registers: registers) }
 
     before do
-      expect(template).to receive(:production?).and_return(true)
+      expect(Jekyll).to receive(:env).and_return("production")
       template.instance_variable_set(:@context, context)
     end
 

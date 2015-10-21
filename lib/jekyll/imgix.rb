@@ -36,7 +36,7 @@ module Jekyll
     end
 
     def production?
-      env == 'production'
+      Jekyll.env == 'production'
     end
 
     def development?
@@ -49,10 +49,6 @@ module Jekyll
 
     def token
       @context.registers[:site].config.fetch('imgix', {}).fetch('secure_url_token', nil)
-    end
-
-    def env
-      ENV['JEKYLL_ENV'] || 'development'
     end
   end
 end
