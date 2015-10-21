@@ -70,7 +70,7 @@ imgix:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-imgix.
+Bug reports and pull requests are welcome on GitHub at https://github.com/imgix/jekyll-imgix.
 
 
 ## License
