@@ -1,34 +1,72 @@
 # jekyll-imgix ![Travis Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/imgix`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple Jekyll plugin for rolling imgix functionality into your Jekyll site.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+There are a handful of ways to install Jekyll plugins.
+
+## Rubygems
+
+```
+$ gem install jekyll-imgix
+```
+
+Then include `jekyll-imgix` in the `gems:` section of your `_config.yml` file:
+
+```yaml
+gems: [jekyll-other-plugin, jekyll-imgix]
+```
+
+## Bundler
+
+Include the following in your `Gemfile`:
 
 ```ruby
 gem 'jekyll-imgix'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-imgix
-
 ## Usage
 
-TODO: Write usage instructions here
+**jekyll-imgix does not do anything unless JEKYLL_ENV is set to production**. For example,
+you will want to run `JEKYLL_ENV=production jekyll build` before deploying your site to
+production.
 
-## Development
+jekyll-imgix exposes its functionality as a single Jekyll Filter, `imgix_url`.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Simply pass an existing image path to it to activate it:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```html
+<img src={{ "/images/bear.jpg" | imgix_url }} />
+```
+
+That will generate the following HTML in your output:
+
+```html
+<img src="https://assets.imgix.net/images/bear.jpg" />
+```
+
+You can also pass parameters to the `imgix_url` helper like so:
+
+```html
+<img src={{ "/images/bear.jpg" | imgix_url: w: 400, h: 300 }} />
+```
+
+Which would result in the following HTML:
+
+```html
+<img src="https://assets.imgix.net/images/bear.jpg?w=400&h300" />
+```
+
+### Configuration
+
+jekyll-imgix requires a configuration block in your `_config.yml`:
+
+```yaml
+imgix:
+  source: assets.imgix.net # Your imgix source address
+  secure_url_token: FACEBEEF12 # (optional) The Secure URL Token associated with your source
+```
 
 ## Contributing
 
