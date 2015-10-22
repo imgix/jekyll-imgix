@@ -55,7 +55,7 @@ You can also pass parameters to the `imgix_url` helper like so:
 Which would result in the following HTML:
 
 ```html
-<img src="https://assets.imgix.net/images/bear.jpg?w=400&h300" />
+<img src="https://assets.imgix.net/images/bear.jpg?w=400&h=300" />
 ```
 
 ### Configuration
