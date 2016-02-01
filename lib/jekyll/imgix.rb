@@ -22,7 +22,8 @@ module Jekyll
       return @client if @client
 
       opts = default_opts.dup
-      opts[:token] = token if token
+      opts[:secure_url_token] = secure_url_token if secure_url_token
+      opts[:include_library_param] = include_library_param?
       @client = ::Imgix::Client.new(opts)
     end
 
@@ -31,7 +32,7 @@ module Jekyll
         host: source,
         library_param: "jekyll",
         library_version: VERSION,
-        secure: true
+        use_https: true
       }
     end
 
@@ -43,12 +44,20 @@ module Jekyll
       !production?
     end
 
-    def source
-      @context.registers[:site].config.fetch('imgix', {}).fetch('source', nil)
+    def ix_config
+      @context.registers[:site].config.fetch('imgix', {})
     end
 
-    def token
-      @context.registers[:site].config.fetch('imgix', {}).fetch('secure_url_token', nil)
+    def source
+      ix_config.fetch('source', nil)
+    end
+
+    def secure_url_token
+      ix_config.fetch('secure_url_token', nil)
+    end
+
+    def include_library_param?
+      ix_config.fetch('include_library_param', true)
     end
   end
 end

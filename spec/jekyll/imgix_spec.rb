@@ -58,23 +58,24 @@ describe Jekyll::Imgix do
         {
           'imgix' => {
             'source' => source,
-            'secure_url_token' => "FACEBEEF"
+            'secure_url_token' => 'FACEBEEF',
+            'include_library_param' => false
           }
         }
       end
 
       # We jump through these hoops because including the version number will
-      # mess with the signature when the version number get incremented
+      # mess with the signature when the version number is incremented
       before do
         expect(template).to receive(:default_opts).and_return({
           host: source,
-          include_library_version: false,
-          secure: true
+          include_library_param: false,
+          use_https: true
         })
       end
 
       it 'signs the URL' do
-        expect(template.imgix_url(path, { w: 400, h: 300 })).to eq "https://assets.imgix.net/cats.gif?ixlib=rb-0.3.5&w=400&h=300&s=8638dec97e477f1ff388113382e5b8bd"
+        expect(template.imgix_url(path, { w: 400, h: 300 })).to eq "https://assets.imgix.net/cats.gif?w=400&h=300&s=e7e25321c9e007f36a8a4610662f32aa"
       end
     end
 
