@@ -4,26 +4,21 @@ A simple Jekyll plugin for rolling imgix functionality into your Jekyll site.
 
 ## Installation
 
-There are a handful of ways to install Jekyll plugins.
+First, add `liquid` and `jekyll-imgix` to the `:jekyll_plugins` group in your Gemfile:
 
-## Rubygems
-
-```
-$ gem install jekyll-imgix
+``` ruby
+group :jekyll_plugins do
+  gem 'rouge'
+  gem 'kramdown'
+  gem 'liquid'
+  gem 'jekyll-imgix'
+end
 ```
 
 Then include `jekyll-imgix` in the `gems:` section of your `_config.yml` file:
 
-```yaml
-gems: [jekyll-other-plugin, jekyll-imgix]
-```
-
-## Bundler
-
-Include the following in your `Gemfile`:
-
-```ruby
-gem 'jekyll-imgix'
+``` yaml
+gems: [jekyll/imgix]
 ```
 
 ## Usage
