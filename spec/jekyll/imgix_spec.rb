@@ -49,6 +49,18 @@ describe Jekyll::Imgix do
       expect(template.imgix_url(path)).to eq "https://assets.imgix.net/cats.gif?ixlib=jekyll-#{Jekyll::Imgix::VERSION}"
     end
 
+    it 'URL encodes param keys' do
+      expect(template.imgix_url('demo.png', {'hello world' => 'interesting'})).to eq "https://assets.imgix.net/demo.png?ixlib=jekyll-#{Jekyll::Imgix::VERSION}&hello%20world=interesting"
+    end
+
+    it 'URL encodes param values' do
+      expect(template.imgix_url('demo.png', {hello_world: '/foo"> <script>alert("hacked")</script><'})).to eq "https://assets.imgix.net/demo.png?ixlib=jekyll-#{Jekyll::Imgix::VERSION}&hello_world=%2Ffoo%22%3E%20%3Cscript%3Ealert%28%22hacked%22%29%3C%2Fscript%3E%3C"
+    end
+
+    it 'Base64 encodes Base64 param variants' do
+      expect(template.imgix_url('~text', {txt64: 'I cannøt belîév∑ it wors! 😱'})).to eq "https://assets.imgix.net/~text?ixlib=jekyll-#{Jekyll::Imgix::VERSION}&txt64=SSBjYW5uw7h0IGJlbMOuw6l24oiRIGl0IHdvcu-jv3MhIPCfmLE"
+    end
+
     it 'adds parameters' do
       expect(template.imgix_url(path, { w: 400, h: 300 })).to eq "https://assets.imgix.net/cats.gif?ixlib=jekyll-#{Jekyll::Imgix::VERSION}&w=400&h=300"
     end
