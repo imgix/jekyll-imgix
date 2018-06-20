@@ -70,5 +70,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/imgix/
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [BSD-2-Clause License](http://opensource.org/licenses/BSD-2-Clause).
 
