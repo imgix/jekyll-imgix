@@ -1,6 +1,23 @@
-# jekyll-imgix ![Travis Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)
+<!-- ix-docs-ignore -->
+![imgix logo](https://assets.imgix.net/sdk-imgix-logo.svg)
 
-A simple Jekyll plugin for rolling imgix functionality into your Jekyll site.
+A Jekyll plugin for integrating imgix into Jekyll sites.
+
+[![Gem Version](https://badge.fury.io/rb/jekyll-imgix.svg)](https://rubygems.org/gems/jekyll-imgix)
+[![Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)](https://travis-ci.org/imgix/jekyll-imgix)
+![Downloads](https://img.shields.io/gem/dt/jekyll-imgix)
+[![License](https://img.shields.io/github/license/imgix/drift)](https://github.com/imgix/jekyll-imgix/blob/master/LICENSE)
+
+---
+<!-- /ix-docs-ignore -->
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Multi Source Configuration](#multi-source-configuration)
+- [Usage](#usage)
+  - [Multi Source Usage](#multi-source-usage)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
 
 ## Installation
 
@@ -54,7 +71,7 @@ production.
 
 jekyll-imgix exposes its functionality as a single Jekyll Filter, `imgix_url`.
 
-Simply pass an existing image path to it to activate it:
+Pass an existing image path to it to activate it:
 
 ```html
 <img src={{ "/images/bear.jpg" | imgix_url }} />
@@ -99,11 +116,6 @@ In absence of correctly configured `default_source`, `imgix_url` will report `Ru
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/imgix/jekyll-imgix.
-
-
-## License
-
-The gem is available as open source under the terms of the [BSD-2-Clause License](http://opensource.org/licenses/BSD-2-Clause).
 
 ## Code of Conduct
 Users contributing to or participating in the development of this project are subject to the terms of imgix's [Code of Conduct](https://github.com/imgix/code-of-conduct).
