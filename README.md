@@ -1,7 +1,7 @@
 <!-- ix-docs-ignore -->
 ![imgix logo](https://assets.imgix.net/sdk-imgix-logo.svg)
 
-A Jekyll plugin for integrating imgix into Jekyll sites.
+`jekyll-imgix` is a plugin for integrating [imgix](https://www.imgix.com) into Jekyll sites.
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-imgix.svg)](https://rubygems.org/gems/jekyll-imgix)
 [![Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)](https://travis-ci.org/imgix/jekyll-imgix)
@@ -23,7 +23,7 @@ A Jekyll plugin for integrating imgix into Jekyll sites.
 
 First, add `liquid` and `jekyll-imgix` to the `:jekyll_plugins` group in your Gemfile:
 
-``` ruby
+```rb
 group :jekyll_plugins do
   gem 'rouge'
   gem 'kramdown'
