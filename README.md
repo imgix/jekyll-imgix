@@ -32,10 +32,10 @@ group :jekyll_plugins do
 end
 ```
 
-Then include `jekyll-imgix` in the `gems:` section of your `_config.yml` file:
+Then include `jekyll-imgix` in the `plugins:` section of your `_config.yml` file:
 
 ``` yaml
-gems: [jekyll/imgix]
+plugins: [jekyll/imgix]
 ```
 
 ## Configuration
