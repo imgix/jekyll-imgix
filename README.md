@@ -4,7 +4,7 @@
 `jekyll-imgix` is a plugin for integrating [imgix](https://www.imgix.com) into Jekyll sites.
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-imgix.svg)](https://rubygems.org/gems/jekyll-imgix)
-[![Build Status](https://travis-ci.org/imgix/jekyll-imgix.svg)](https://travis-ci.org/imgix/jekyll-imgix)
+[![Build Status](https://travis-ci.com/imgix/jekyll-imgix.svg)](https://travis-ci.com/imgix/jekyll-imgix)
 ![Downloads](https://img.shields.io/gem/dt/jekyll-imgix)
 [![License](https://img.shields.io/github/license/imgix/drift)](https://github.com/imgix/jekyll-imgix/blob/main/LICENSE)
 
