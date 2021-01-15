@@ -7,17 +7,19 @@
 [![Build Status](https://travis-ci.com/imgix/jekyll-imgix.svg)](https://travis-ci.com/imgix/jekyll-imgix)
 ![Downloads](https://img.shields.io/gem/dt/jekyll-imgix)
 [![License](https://img.shields.io/github/license/imgix/drift)](https://github.com/imgix/jekyll-imgix/blob/main/LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix?ref=badge_shield)
 
 ---
 <!-- /ix-docs-ignore -->
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Multi-source configuration](#multi-source-configuration)
+    * [Multi-source configuration](#multi-source-configuration)
 - [Usage](#usage)
-  - [Multi-source usage](#multi-source-usage)
+    * [Multi-source usage](#multi-source-usage)
 - [Contributing](#contributing)
 - [Code of Conduct](#code-of-conduct)
+- [License](#license)
 
 ## Installation
 
@@ -119,3 +121,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/imgix/
 
 ## Code of Conduct
 Users contributing to or participating in the development of this project are subject to the terms of imgix's [Code of Conduct](https://github.com/imgix/code-of-conduct).
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix?ref=badge_large)
