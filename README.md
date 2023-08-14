@@ -1,13 +1,16 @@
 <!-- ix-docs-ignore -->
+
+> [DEPRECATED]
+> 
+> _This project has reached the end of its development._
+> _Feel free to browse the code, but please use other solutions for integrating imgix into your Jekyll projects._
+
 ![imgix logo](https://assets.imgix.net/sdk-imgix-logo.svg)
 
 `jekyll-imgix` is a plugin for integrating [imgix](https://www.imgix.com) into Jekyll sites.
-
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-imgix.svg)](https://rubygems.org/gems/jekyll-imgix)
-[![Build Status](https://travis-ci.com/imgix/jekyll-imgix.svg)](https://travis-ci.com/imgix/jekyll-imgix)
 ![Downloads](https://img.shields.io/gem/dt/jekyll-imgix)
-[![License](https://img.shields.io/github/license/imgix/drift)](https://github.com/imgix/jekyll-imgix/blob/main/LICENSE)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimgix%2Fjekyll-imgix?ref=badge_shield)
 
 ---
 <!-- /ix-docs-ignore -->
